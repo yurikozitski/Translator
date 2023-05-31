@@ -13,6 +13,7 @@ Asp.Net Core 7 is used for back-end and React.JS for front-end.
 - C#
 - HTML
 - CSS
+- Responsive design
 - Asp.Net Core 7
 - React.js
 - Visual Studio 2022 IDE

@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Template</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, dl, dt, dd,
+        ol, ul, li, form, table, caption, tr, th, td, main, section, article, aside, footer, header {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            background-color: white;
+        }
+
+        html, body, main {
+            height: 100%;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        select {
+            width: 50%;
+            margin: 10px 0px 10px 0px;
+            font-size: 150%;
+            outline: none !important;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 80%;
+            font-size: 150%;
+            resize: none;
+            outline: none !important;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+            textarea:focus {
+                border: 3px solid #bbb;
+            }
+
+        button {
+            margin-top: 10px;
+            width: 80%;
+            font-size: 150%;
+            overflow: hidden;
+            color:white;
+            border: 1px solid green;
+            background-color:green;
+            border-radius: 5px;
+        }
+            button:hover {
+                background-color: #00a505;
+                box-shadow: 0px 0px 2px 2px #00a505;
+                border:none;
+            }
+
+        .translateFromBlock {
+            width: 25%;
+            height: 300px;
+        }
+
+        .translateButtonBlock {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 10%;
+            height: 300px;
+        }
+
+        .translateToBlock {
+            width: 25%;
+            height: 300px;
+        }
+
+        @media (max-width:480px) {
+            main {
+                flex-direction: column;
+                align-items: center;
+                justify-content:flex-start;
+            }
+
+            select{
+                width:100%;
+            }
+
+            .translateFromBlock, .translateToBlock{
+                width:80%;
+                height:30%;
+            }
+
+            .translateButtonBlock {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                height: 10%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="translateFromBlock">
+            <select name="translateFromLang">
+                <option value="en">English</option>
+                <option value="de">German</option>
+                <option value="ua">Ukrainian</option>
+                <option value="pl">Polish</option>
+            </select>
+            <textarea name="translateFromText" placeholder="Type here to translate" maxlength="500"></textarea>
+        </section>
+        <section class="translateButtonBlock">
+            <button>Translate</button>
+        </section>
+        <section class="translateToBlock">
+            <select name="translateToLang">
+                <option value="en">English</option>
+                <option value="de">German</option>
+                <option value="ua">Ukrainian</option>
+                <option value="pl">Polish</option>
+            </select>
+            <textarea name="translateToText"></textarea>
+        </section>
+    </main>
+</body>
+</html>
